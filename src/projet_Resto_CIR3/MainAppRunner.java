@@ -23,8 +23,8 @@ public class MainAppRunner {
 		currInv.subInvItem("salade", 70);
 		currInv.affInv();
 		
-		String Title = "TestPurpose";
-		TxtManagement testFile = new TxtManagement(Title);
+		
+		TxtManagement testFile = new TxtManagement("test");
 		testFile.updateText("Manou est un vrai Chi-negre.");
 		testFile.ecrireTexte();
 		testFile.lireTexte();

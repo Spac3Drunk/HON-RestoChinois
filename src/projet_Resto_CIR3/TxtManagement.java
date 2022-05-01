@@ -2,19 +2,15 @@ package projet_Resto_CIR3;
 
 import java.io.*;
 import java.nio.file.*;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.*;
 
 public class TxtManagement {
 	
 	//Varibles________________________________________________________________________________________
-	public String nomDuFichier;
-	public String filePath = "C:/Java/texteProjet/";
-	public String texteAInscrire;
 	
+	public String nomDuFichier;
+	public String filePath = "./src/Txts/";
+	public String texteAInscrire;
 	
 	//Constructeurs___________________________________________________________________________________
 	
@@ -27,10 +23,8 @@ public class TxtManagement {
 		this.nomDuFichier = fileName;
 	}
 	
-	
-	
-	
 	//Methods_________________________________________________________________________________________
+	
 	public void ecrireTexte() {
 		byte[] data = this.texteAInscrire.getBytes();
 		 Path chemin = Paths.get(this.filePath+this.nomDuFichier+".txt");
