@@ -24,7 +24,7 @@ public class Inventaire{
 	
 	//Methods_________________________________________________________________________________________
 	
-	public void affInv() {//TODO aff defVals when got pairs
+	public void affInv() {
 		for(Map.Entry<String, Pair<Integer, Integer>> ent : inv.entrySet()) {
 			System.out.println(ent.getKey() + "\t : \t" + ent.getValue().getValue()+ "\t /"+ ent.getValue().getKey());
 		}
