@@ -9,26 +9,31 @@ import java.io.PrintWriter;
 import java.util.*;
 
 public class TxtManagement {
-
-	String nom;
-	String texte;
-	int choix = 0;
-
-	Scanner sc = new Scanner (System.in);
-	System.out.println("Choix : ");
-	System.out.println("Ecriture (1)");
-	System.out.println("Lecture (2)");
-	choix = sc.nextInt();
-	String skip = sc.nextLine();
-
-	System.out.println("Ecrire le nom du fichier");
-	nom = sc.nextLine();
 	
-	if(choix == 1) {
-		System.out.println("Saisir le texte");
-		texte = sc.nextLine();
-		 byte[] data = texte.getBytes();
-		 Path chemin = Paths.get("C:/Users/IFlee/eclipse-workspace/TestEcriture/src/testPack/"+nom+".txt");
+	//Varibles________________________________________________________________________________________
+	public String nomDuFichier;
+	public String filePath = "C:/Java/texteProjet/";
+	public String texteAInscrire;
+	
+	
+	//Constructeurs___________________________________________________________________________________
+	
+	public TxtManagement(String fileName, String path) {
+		this.nomDuFichier = fileName;
+		this.filePath = path;
+	}
+	
+	public TxtManagement(String fileName) {
+		this.nomDuFichier = fileName;
+	}
+	
+	
+	
+	
+	//Methods_________________________________________________________________________________________
+	public void ecrireTexte() {
+		byte[] data = this.texteAInscrire.getBytes();
+		 Path chemin = Paths.get(this.filePath+this.nomDuFichier+".txt");
 	        OutputStream output = null;
 	        try {
 	            // Un objet BufferedOutputStream est affecté à la référence OutputStream.
@@ -41,13 +46,27 @@ public class TxtManagement {
 	 
 	            // fermer le fichier
 	            output.close();
-	            System.out.println("Vous avez écrit : ' " + texte + " ' dans le fichier : " + nom + ".txt");
 	        } catch (Exception e) {
 	            System.out.println("Message " + e);
 	        }
-	}else if(choix == 2) {
+	}
+	
+	public void updateText(String textToWrite) {
+		this.texteAInscrire = textToWrite;
+	}
+	
+	public void updatePath(String Path) {
+		this.filePath = Path;
+	}
+	
+	public void updateName(String fileName) {
+		this.nomDuFichier = fileName;
+	}
+	
+	public void lireTexte() {
 		InputStream input = null;
-		Path chemin = Paths.get("C:/Users/IFlee/eclipse-workspace/TestEcriture/src/testPack/"+nom+".txt");
+		Path chemin = Paths.get(this.filePath+this.nomDuFichier+".txt");
+		System.out.println("Contenu de " + this.nomDuFichier + ".txt : ");
         try {
             input = Files.newInputStream(chemin);
              
@@ -61,6 +80,5 @@ public class TxtManagement {
             System.out.println("Message " + e);
         }
 	}
-
 	
 }
