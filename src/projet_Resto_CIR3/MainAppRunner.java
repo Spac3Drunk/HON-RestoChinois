@@ -22,15 +22,17 @@ public class MainAppRunner {
 		currInv.subInvItem("tomate", 12);
 		currInv.subInvItem("salade", 70);
 		currInv.affInv();
-		TxtManagement listeDeCourse = new TxtManagement("liste_de_course");
-		currInv.listeCourse(listeDeCourse);
 		
 		
 		TxtManagement testFile = new TxtManagement("test");
 		testFile.affTxt();
-		testFile.updateLine("dodo", 15);
+		testFile.updateLine("test", 1);
+		testFile.updateLine("shit", 4);
+		testFile.affBuffer();
+		testFile.updateLine("dodo", 1);
 		testFile.affBuffer();
 		testFile.ecrireTexte();
+		testFile.affTxt();
 	}
 
 }
