@@ -25,9 +25,14 @@ public class MainAppRunner {
 		
 		
 		TxtManagement testFile = new TxtManagement("test");
-		testFile.updateText("Manou est un vrai Chi-negre.");
+		testFile.affTxt();
+		testFile.updateLine("test", 1);
+		testFile.updateLine("shit", 4);
+		testFile.affBuffer();
+		testFile.updateLine("dodo", 1);
+		testFile.affBuffer();
 		testFile.ecrireTexte();
-		testFile.lireTexte();
+		testFile.affTxt();
 	}
 
 }
