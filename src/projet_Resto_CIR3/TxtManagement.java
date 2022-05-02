@@ -47,7 +47,7 @@ public class TxtManagement {
 		}
 	}
 	
-	public void updateLine(String newTexte, int line) {
+	public void updateLine(String newTexte, int line) { // update "newTexte" a la ligne numero "line" /!\ update uniquement dans les variables
 		if(this.texteEnLignes.size() <= line) {
 			while(this.texteEnLignes.size() <= line) {
 				this.texteEnLignes.add("");
