@@ -17,13 +17,13 @@ public class Staff {
 	
 	//Constructeurs___________________________________________________________________________________
 	
-		public Staff(ArrayList<String> keys, ArrayList<Pair<String, Integer>> role_And_Daystreak) {
-			if (keys.size() == role_And_Daystreak.size()) {
-				for (int i=0; i<keys.size(); i++) {
-					staffList.put(keys.get(i), role_And_Daystreak.get(i));
+		public Staff(ArrayList<String> name, ArrayList<Pair<String, Integer>> role_And_Daystreak) {
+			if (name.size() == role_And_Daystreak.size()) {
+				for (int i=0; i<name.size(); i++) {
+					staffList.put(name.get(i), role_And_Daystreak.get(i));
 				}
 			}else {
-				System.out.println("Vous vous etes chinegrer dessus, keys.size != amounts.size != defaultAmounts.size");
+				System.out.println("Le staff pue, name.size != role_And_Daystreak.size");
 			}
 		}
 		

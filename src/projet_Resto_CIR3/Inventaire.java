@@ -1,4 +1,5 @@
 package projet_Resto_CIR3;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ArrayList;
@@ -42,6 +43,17 @@ public class Inventaire{
 		}
 	}
 	
-	
+	public void listeCourse(TxtManagement listeTxt) {
+		listeTxt.clearBuffer();
+		listeTxt.updateLine("Ingredients manquants : \n" , 0);
+		int counter = 1;
+		String tmp;
+		for(Map.Entry<String, Pair<Integer, Integer>> ent : inv.entrySet()) {
+			tmp = Integer.toString(ent.getValue().getKey() - ent.getValue().getValue());
+			listeTxt.updateLine(ent.getKey() + "\t : \t" + tmp, counter);
+			counter ++;
+		}
+		listeTxt.ecrireTexte();
+	}
 	
 }

@@ -57,6 +57,11 @@ public class TxtManagement {
 		this.updateText();
 	}
 	
+	public void clearBuffer() {
+		this.texteEnLignes.clear();
+		this.updateText();
+	}
+	
 	public void ecrireTexte() { //save data to the txt
 		byte[] data = this.texte.getBytes();
 		Path chemin = Paths.get(this.filePath+this.nomDuFichier+".txt");
@@ -112,5 +117,7 @@ public class TxtManagement {
         	System.out.println("Impossible d'afficher le txt : Error " + e);
         }
 	}
+	
+	
 	
 }
