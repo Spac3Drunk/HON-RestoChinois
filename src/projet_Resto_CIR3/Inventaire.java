@@ -2,7 +2,6 @@ package projet_Resto_CIR3;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.ArrayList;
 import javafx.util.Pair;
 
 public class Inventaire{
