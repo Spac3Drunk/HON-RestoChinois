@@ -32,7 +32,7 @@ public class Staff {
 		public void startSession(String name) {
 			if(staffList.containsKey(name)) {
 				String staffRole = staffList.get(name).getKey();
-				if(staffList.get(name).getValue() < 3) {
+				if(staffList.get(name).getValue() < 3) { // verif jours
 					if(staffRole == "Cuisinier") {
 						this.nbCuistot++;
 					}else if(staffRole == "Serveur") {

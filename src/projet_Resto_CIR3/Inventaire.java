@@ -13,13 +13,25 @@ public class Inventaire{
 	
 	//Constructeurs___________________________________________________________________________________
 	
-	public Inventaire(ArrayList<String> keys, ArrayList<Pair<Integer, Integer>> default_And_Amounts) {
+	public Inventaire(ArrayList<String> keys, ArrayList<Pair<Integer, Integer>> default_And_Amounts) { //TODO supprimer ce constructeur
 		if (keys.size() == default_And_Amounts.size()) {
 			for (int i=0; i<keys.size(); i++) {
 				inv.put(keys.get(i), default_And_Amounts.get(i));
 			}
 		}else {
 			System.out.println("Vous vous etes chies dessus, keys.size != amounts.size != defaultAmounts.size");
+		}
+	}
+	
+	public Inventaire(TxtManagement invTxt) {
+		try {
+			for (int i=0; i<invTxt.texteEnLignes.size(); i=i+3) {//TODO verif doublon dans les noms /!\ mais pas les string nombres
+				inv.put(invTxt.texteEnLignes.get(i), new Pair<Integer, Integer>(
+						Integer.parseInt(invTxt.texteEnLignes.get(i+1)),
+						Integer.parseInt(invTxt.texteEnLignes.get(i+2))));
+			}
+		}catch(Exception e) {
+			System.out.println("Erreur dans le format de " + invTxt.filePath + invTxt.nomDuFichier + " : Error " + e);
 		}
 	}
 	
