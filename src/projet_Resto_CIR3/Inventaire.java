@@ -13,16 +13,6 @@ public class Inventaire{
 	
 	//Constructeurs___________________________________________________________________________________
 	
-	public Inventaire(ArrayList<String> keys, ArrayList<Pair<Integer, Integer>> default_And_Amounts) { //TODO supprimer ce constructeur
-		if (keys.size() == default_And_Amounts.size()) {
-			for (int i=0; i<keys.size(); i++) {
-				inv.put(keys.get(i), default_And_Amounts.get(i));
-			}
-		}else {
-			System.out.println("Vous vous etes chies dessus, keys.size != amounts.size != defaultAmounts.size");
-		}
-	}
-	
 	public Inventaire(TxtManagement invTxt) {
 		try {
 			for (int i=0; i<invTxt.texteEnLignes.size(); i=i+3) {//TODO verif doublon dans les noms /!\ mais pas les string nombres
@@ -58,14 +48,27 @@ public class Inventaire{
 	public void listeCourse(TxtManagement listeTxt) {
 		listeTxt.clearBuffer();
 		listeTxt.updateLine("Ingredients manquants : \n" , 0);
-		int counter = 1;
+		int count = 1;
 		String tmp;
 		for(Map.Entry<String, Pair<Integer, Integer>> ent : inv.entrySet()) {
 			tmp = Integer.toString(ent.getValue().getKey() - ent.getValue().getValue());
-			listeTxt.updateLine(ent.getKey() + "\t : \t" + tmp, counter);
-			counter ++;
+			listeTxt.updateLine(ent.getKey() + "\t : \t" + tmp, count);
+			count ++;
 		}
 		listeTxt.ecrireTexte();
 	}
 	
+	public void updateInv(TxtManagement invTxt) {
+		invTxt.clearBuffer();
+		int count = 0;
+		for(Map.Entry<String, Pair<Integer, Integer>> ent : inv.entrySet()) {
+			invTxt.updateLine(ent.getKey(), count);
+			count ++;
+			invTxt.updateLine(Integer.toString(ent.getValue().getKey()), count);
+			count ++;
+			invTxt.updateLine(Integer.toString(ent.getValue().getValue()), count);
+			count ++;
+		}
+		invTxt.ecrireTexte();
+	}
 }

@@ -10,16 +10,18 @@ public class MainAppRunner {
 		inventaireTxt.updateLine("150", 2);
 		inventaireTxt.updateLine("Salade", 3);
 		inventaireTxt.updateLine("90", 4);
-		inventaireTxt.updateLine("72", 5);
+		inventaireTxt.updateLine("75", 5);
+		inventaireTxt.ecrireTexte();
 
 		Inventaire currInv = new Inventaire(inventaireTxt);
 		
 		currInv.affInv();
 		currInv.subInvItem("Tomate", 12);
-		currInv.subInvItem("Salade", 70);
+		currInv.subInvItem("Salade", 63);
 		currInv.affInv();
 		TxtManagement listeDeCourse = new TxtManagement("liste_de_course");
 		currInv.listeCourse(listeDeCourse);
+		currInv.updateInv(inventaireTxt);
 	}
 
 }
