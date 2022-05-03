@@ -60,10 +60,12 @@ public class Menu {
 	
 	public void affUnPlat(int id) {
 		this.listePlats.get(id).affPlat();
+		System.out.println("==================================================");
 	}
 	
 	public void affNbPlat() {
-		System.out.println(this.nbPlats);
+		System.out.println("Nombre de plats : " + this.nbPlats);
+		
 	}
 	
 }
