@@ -14,14 +14,29 @@ public class MainAppRunner {
 		inventaireTxt.ecrireTexte();
 
 		Inventaire currInv = new Inventaire(inventaireTxt);
-		
-		currInv.affInv();
 		currInv.subInvItem("Tomate", 12);
 		currInv.subInvItem("Salade", 63);
-		currInv.affInv();
+		
 		TxtManagement listeDeCourse = new TxtManagement("liste_de_course");
 		currInv.listeCourse(listeDeCourse);
 		currInv.updateInv(inventaireTxt);
+		
+		TxtManagement StaffTxt = new TxtManagement("StaffList");
+		Staff currStaff = new Staff(StaffTxt);
+		currStaff.startShift("XiaoLong");
+		
+		currStaff.startShift("XueWun");
+		
+		currStaff.startShift("LiDao");
+		currStaff.startShift("LiBing");
+		
+		currStaff.startShift("MaoZheDong");
+		currStaff.startShift("DenXiaoMing");
+		currStaff.startShift("XiJingPing");
+		currStaff.startShift("LiuShaoqi");
+		currStaff.endService(StaffTxt);
+
+		
 	}
 
 }
