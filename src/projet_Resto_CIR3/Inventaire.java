@@ -14,7 +14,7 @@ public class Inventaire{
 	
 	public Inventaire(TxtManagement invTxt) {
 		try {
-			for (int i=0; i<invTxt.texteEnLignes.size(); i=i+3) {//TODO verif doublon dans les noms /!\ mais pas les string nombres
+			for (int i=0; i<invTxt.texteEnLignes.size(); i=i+3) {// TODO verif doublon dans les noms /!\ mais pas les string nombres
 				this.inv.put(invTxt.texteEnLignes.get(i), new Pair<Integer, Integer>(
 						Integer.parseInt(invTxt.texteEnLignes.get(i+1)),
 						Integer.parseInt(invTxt.texteEnLignes.get(i+2))));
