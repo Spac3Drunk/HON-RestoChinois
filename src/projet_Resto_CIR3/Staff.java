@@ -39,7 +39,8 @@ public class Staff {
 		
 		//Methods_________________________________________________________________________________________
 		
-		public void startShift(String name) {
+		public String startShift(String name) {
+			String res = "";
 			if(this.staffList.containsKey(name)) {
 				String staffRole = this.staffList.get(name).getKey();
 				if(staffRole.equals("Manageur")) {
@@ -55,11 +56,12 @@ public class Staff {
 					}
 					workingStaff.add(name);
 				}else if(this.staffList.get(name).getValue() >= 3) {
-					System.out.println(name + " ne peut pas travailler, il a déjà travaillé " + this.staffList.get(name).getValue() + " Jours d'affilé en tant que " + staffRole + " !");
+					res = ("\n " + name + " ne peut pas travailler, il a déjà travaillé " + this.staffList.get(name).getValue() + " Jours d'affilé en tant que " + staffRole + " !");
 				}
 			}else {
-				System.out.println("Vous etes un connard, name n'existe pas");
+				res = ("\n " + name + " n'existe pas");
 			}
+			return res;
 		}
 		
 		public boolean startService(){
@@ -107,4 +109,13 @@ public class Staff {
 			System.out.println();
 		}
 		
+		public ArrayList<String> getStaffByRole(String Role) {
+			ArrayList<String> res = new ArrayList<String>();
+			for(Map.Entry<String, Pair<String, Integer>> ent : this.staffList.entrySet()) {
+				if(ent.getValue().getKey().equals(Role)) {
+					res.add(ent.getKey());
+				}
+			}
+			return res;
+		}
 }

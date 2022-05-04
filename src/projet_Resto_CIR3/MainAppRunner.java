@@ -9,12 +9,7 @@ import javafx.stage.Stage;
 public class MainAppRunner extends Application {
 
 	public static void main(String[] args) {
-		
-		//Front________________________________________________________________________________________
-		
-		launch(args);
-		
-		
+				
 		//Back_________________________________________________________________________________________
 		
 		TxtManagement inventaireTxt = new TxtManagement("inventaire");
@@ -34,35 +29,32 @@ public class MainAppRunner extends Application {
 		currInv.listeCourse(listeDeCourse);
 		currInv.updateInv(inventaireTxt);
 		
-		TxtManagement StaffTxt = new TxtManagement("StaffList");
-		Staff currStaff = new Staff(StaffTxt);
-		currStaff.startShift("XiaoLong");
+		//currInv.affInv();
 		
-		currStaff.startShift("XueWun");
-		
-		currStaff.startShift("LiDao");
-		currStaff.startShift("LiBing");
-		
-		currStaff.startShift("MaoZheDong");
-		currStaff.startShift("DenXiaoMing");
-		currStaff.startShift("XiJingPing");
-		currStaff.startShift("LiuShaoqi");
-		currStaff.endService(StaffTxt);
-		
-		TxtManagement listePlats = new TxtManagement("plats");
-        Menu cartePlats = new Menu(listePlats);
-        cartePlats.affUnPlat(13);
+		//TxtManagement listePlats = new TxtManagement("plats");
+        //Menu cartePlats = new Menu(listePlats);
+        //cartePlats.affUnPlat(13);
         
-        Table test = new Table(5);
-        test.commandePlatMenu100ans(13, cartePlats, currInv);
+        //Table test = new Table(5);
+        //test.commandePlatMenu100ans(13, cartePlats, currInv);
 
+		//Front________________________________________________________________________________________
+		
+		launch(args);
+		
 
 	}
 
 	@Override
 	public void start(Stage stage) throws Exception {
+		
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("ecran.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("ecran.fxml"));
+			Parent root = loader.load();
+			
+			Controller control = loader.getController();
+			
+			
 			Scene scene = new Scene(root);
 			
 			stage.setResizable(false);
