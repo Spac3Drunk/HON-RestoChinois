@@ -1,8 +1,22 @@
 package projet_Resto_CIR3;
 
-public class MainAppRunner {
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class MainAppRunner extends Application {
 
 	public static void main(String[] args) {
+		
+		//Front________________________________________________________________________________________
+		
+		launch(args);
+		
+		
+		//Back_________________________________________________________________________________________
 		
 		TxtManagement inventaireTxt = new TxtManagement("inventaire");
 		inventaireTxt.updateLine("Tomate", 0);
@@ -36,7 +50,21 @@ public class MainAppRunner {
 		currStaff.startShift("LiuShaoqi");
 		currStaff.endService(StaffTxt);
 
-		
+	}
+
+	@Override
+	public void start(Stage stage) throws Exception {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("ecran.fxml"));
+			Scene scene = new Scene(root);
+			
+			stage.setScene(scene);
+			stage.setTitle("RestoManager8000");
+			stage.show();
+			
+		}catch(Exception e) {
+			System.out.println("Erreur dans l'init de la fenetre " + " : Error " + e);
+		}
 	}
 
 }
