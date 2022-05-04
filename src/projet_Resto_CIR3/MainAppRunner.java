@@ -53,8 +53,10 @@ public class MainAppRunner extends Application {
         Menu cartePlats = new Menu(listePlats);
         cartePlats.affUnPlat(13);
         
-        Table test = new Table(5);
-        test.commandePlatMenu100ans(13, cartePlats, currInv);
+        Table test = new Table("Table_1");
+        test.commandePlat(1, cartePlats, currInv);
+        test.commandePlat(0, cartePlats, currInv);
+        test.makeFacture();
 
 
 	}
