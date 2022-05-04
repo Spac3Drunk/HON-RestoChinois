@@ -49,6 +49,8 @@ public class MainAppRunner extends Application {
 		currStaff.startShift("XiJingPing");
 		currStaff.startShift("LiuShaoqi");
 		currStaff.endService(StaffTxt);
+		
+		
 
 	}
 
