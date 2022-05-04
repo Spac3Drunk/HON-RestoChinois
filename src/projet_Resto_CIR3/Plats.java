@@ -23,11 +23,18 @@ public class Plats {
 	public void affPlat() {
 		System.out.println(this.nomDuPlat);
 		System.out.println("Prix : " + this.prix + " euros.");
-		System.out.println("Ingredients :");
-		for(int i = 0;i < this.ingredientsNecessaires.size();i++) {
-			System.out.println(this.ingredientsNecessaires.get(i));
+		if(!this.nomDuPlat.contains("Menu_100_ans")) {
+			System.out.println("Ingredients :");
+			for(int i = 0;i < this.ingredientsNecessaires.size();i++) {
+				System.out.println(this.ingredientsNecessaires.get(i));
+			}
 		}
 		
+	}
+	
+	public void affPlatFacture() {
+		System.out.println(this.nomDuPlat);
+		System.out.println("Prix : " + this.prix + " euros.");
 	}
 	
 }

@@ -50,7 +50,13 @@ public class MainAppRunner extends Application {
 		currStaff.startShift("LiuShaoqi");
 		currStaff.endService(StaffTxt);
 		
-		
+		TxtManagement listePlats = new TxtManagement("plats");
+        Menu cartePlats = new Menu(listePlats);
+        cartePlats.affUnPlat(13);
+        
+        Table test = new Table(5);
+        test.commandePlatMenu100ans(13, cartePlats, currInv);
+
 
 	}
 
