@@ -24,169 +24,269 @@
                <children>
                   <BorderPane layoutY="-2.0" prefHeight="559.0" prefWidth="901.0">
                      <right>
-                        <VBox alignment="TOP_RIGHT" prefHeight="559.0" prefWidth="244.0" BorderPane.alignment="CENTER">
+                        <VBox alignment="TOP_RIGHT" prefHeight="423.0" prefWidth="244.0" BorderPane.alignment="CENTER">
                            <children>
-                              <ListView prefHeight="463.0" prefWidth="262.0" />
-                              <Label prefHeight="37.0" prefWidth="241.0" text="Prix Total :" />
-                              <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="293.0" text="Button" />
+                              <HBox prefHeight="28.0" prefWidth="244.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="36.0" text="Table " />
+                                    <ChoiceBox prefHeight="30.0" prefWidth="208.0" />
+                                 </children>
+                              </HBox>
+                              <ListView prefHeight="405.0" prefWidth="244.0" />
+                              <Label prefHeight="30.0" prefWidth="241.0" text="Prix Total :" />
+                              <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="244.0" text="Valider" />
+                              <Button layoutX="10.0" layoutY="469.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="244.0" text="Payer" />
                            </children>
                         </VBox>
                      </right>
                      <center>
-                        <GridPane gridLinesVisible="true" BorderPane.alignment="CENTER">
-                          <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
-                           <children>
-                              <Button contentDisplay="BOTTOM" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Salade Tomate">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/salad.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button contentDisplay="BOTTOM" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Bol de Salade" GridPane.rowIndex="1">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/saladBol.png" />
-                                       </image></ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button contentDisplay="BOTTOM" layoutX="10.0" layoutY="150.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Potage Oignon" GridPane.rowIndex="2">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/soup.png" />
-                                       </image></ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button contentDisplay="BOTTOM" layoutX="10.0" layoutY="290.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Potage Tomate" GridPane.rowIndex="3">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/soupTomato.png" />
-                                       </image></ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button contentDisplay="BOTTOM" layoutX="10.0" layoutY="430.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Potage Champignon" GridPane.columnIndex="1">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/soupChampi.png" />
-                                       </image></ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button contentDisplay="BOTTOM" layoutX="175.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Burger Royale" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/burger-Royale.png" />
-                                       </image></ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button contentDisplay="BOTTOM" layoutX="175.0" layoutY="150.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Burger Medium" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/burger-Medium.png" />
-                                       </image></ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button contentDisplay="BOTTOM" layoutX="175.0" layoutY="290.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Burger Meat Only" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/burger-Meat-Only.png" />
-                                       </image></ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button contentDisplay="BOTTOM" layoutX="175.0" layoutY="430.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Pizza Fromage" GridPane.columnIndex="2">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/pizzaFromage.png" />
-                                       </image></ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button contentDisplay="BOTTOM" layoutX="339.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Pizza Reine" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/pizzaChampi.png" />
-                                       </image></ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button contentDisplay="BOTTOM" layoutX="339.0" layoutY="150.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Pizza Chorizo" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/pizzaChorizo.png" />
-                                       </image></ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button contentDisplay="BOTTOM" layoutX="339.0" layoutY="290.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Fajitas Poulet" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/fajitasPoulet.png" />
-                                       </image></ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button contentDisplay="BOTTOM" layoutX="339.0" layoutY="430.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Fajitas Viande" GridPane.columnIndex="3">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../images/fajitasViande.png" />
-                                       </image></ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button layoutX="503.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Button layoutX="503.0" layoutY="150.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
-                                 <graphic>
-                                    <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                           </children>
-                        </GridPane>
+                        <TabPane prefHeight="570.0" prefWidth="657.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                          <tabs>
+                            <Tab text="Plats">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <GridPane gridLinesVisible="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="528.0" prefWidth="658.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button contentDisplay="BOTTOM" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Salade Tomate 9€">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/salad.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Bol de Salade 9€" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/saladBol.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="10.0" layoutY="150.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Potage Oignon 8€" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/soup.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="10.0" layoutY="290.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Potage Tomate 8€" GridPane.rowIndex="3">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/soupTomato.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="10.0" layoutY="430.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Potage Champignon 8€" GridPane.columnIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/soupChampi.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="175.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Burger Royale 15€" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/burger-Royale.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="175.0" layoutY="150.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Burger Medium 15€" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/burger-Medium.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="175.0" layoutY="290.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Burger Meat Only 15€" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/burger-Meat-Only.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="175.0" layoutY="430.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Pizza Fromage 12€" GridPane.columnIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/pizzaFromage.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="339.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Pizza Reine 12€" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/pizzaChampi.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="339.0" layoutY="150.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Pizza Chorizo 12€" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/pizzaChorizo.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="339.0" layoutY="290.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Fajitas Poulet 11€" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/fajitasPoulet.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="339.0" layoutY="430.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Fajitas Viande 11€" GridPane.columnIndex="3">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/fajitasViande.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="503.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Menu 100 ans 100€" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/ballon-anniversaire-100-ans-rainbow-confetti-45-cm_82594_1.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Boissons">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <GridPane gridLinesVisible="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="528.0" prefWidth="658.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Button contentDisplay="BOTTOM" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Limonade 4€">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/kisspng-lemonade-orange-drink-lemon-lime-drink-illustratio-lemon-juice-5a90ba924b07f6.6803579815194343863073.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Cidre doux 5€" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/adobestock-118931778.jpeg" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="10.0" layoutY="430.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Bière sans alcool 5€" GridPane.columnIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/5a1c5c7513a491.1180279115118081170805.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="175.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Jus de fruits 1€" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/kisspng-orange-juice-cocktail-tequila-sunrise-apple-juice-fruit-cocktail-juice-png-5ab1ad10ada7b6.6397521715215936167113.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="175.0" layoutY="430.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Verre d'eau 0€" GridPane.columnIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/kisspng-drinking-water-glass-coffee-cup-juice-glass-5ac9bd01bd97b1.2383436715231705617766.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button contentDisplay="BOTTOM" layoutX="503.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="109.0" prefWidth="141.0" text="Menu 100 ans 100€" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="88.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/ballon-anniversaire-100-ans-rainbow-confetti-45-cm_82594_1.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
                      </center>
-                     <top>
-                        <HBox prefHeight="27.0" prefWidth="901.0" BorderPane.alignment="CENTER">
-                           <children>
-                              <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="872.0" text="Table " />
-                              <ChoiceBox prefHeight="27.0" prefWidth="460.0" />
-                           </children>
-                        </HBox>
-                     </top>
                   </BorderPane>
                </children></AnchorPane>
       </content>
     </Tab>
     <Tab text="Barman">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView layoutX="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="554.0" prefWidth="901.0" />
+               </children></AnchorPane>
       </content>
     </Tab>
       <Tab text="Cuisiner">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <BorderPane layoutY="-2.0" prefHeight="374.0" prefWidth="600.0" />
+                  <ListView layoutY="1.0" prefHeight="554.0" prefWidth="901.0" />
                </children>
             </AnchorPane>
          </content>
@@ -195,7 +295,57 @@
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <BorderPane layoutY="-2.0" prefHeight="374.0" prefWidth="600.0" />
+                  <VBox layoutX="14.0" layoutY="14.0" prefHeight="256.0" prefWidth="159.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="162.0" text="Serveurs" />
+                        <ListView prefHeight="291.0" prefWidth="159.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="173.0" layoutY="14.0" prefHeight="256.0" prefWidth="159.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="159.0" text="Barmans" />
+                        <ListView prefHeight="291.0" prefWidth="159.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="332.0" layoutY="14.0" prefHeight="256.0" prefWidth="159.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="166.0" text="Cuisiniers" />
+                        <ListView prefHeight="291.0" prefWidth="159.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="491.0" layoutY="14.0" prefHeight="256.0" prefWidth="159.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="178.0" text="Managers" />
+                        <ListView prefHeight="281.0" prefWidth="156.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="14.0" layoutY="270.0" prefHeight="256.0" prefWidth="159.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="162.0" text="Serveurs qui travaillent" />
+                        <ListView prefHeight="291.0" prefWidth="159.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="173.0" layoutY="270.0" prefHeight="256.0" prefWidth="159.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="159.0" text="Barmans qui travaillent" />
+                        <ListView prefHeight="291.0" prefWidth="159.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="332.0" layoutY="270.0" prefHeight="256.0" prefWidth="159.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="166.0" text="Cuisiniers qui travaillent" />
+                        <ListView prefHeight="291.0" prefWidth="159.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="491.0" layoutY="270.0" prefHeight="256.0" prefWidth="159.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="178.0" text="Managers qui travaillent" />
+                        <ListView prefHeight="281.0" prefWidth="156.0" />
+                     </children>
+                  </VBox>
+                  <Button layoutX="665.0" layoutY="119.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="220.0" text="Lancer service" />
+                  <Label alignment="CENTER" layoutX="661.0" layoutY="225.0" prefHeight="105.0" prefWidth="227.0" />
+                  <Button layoutX="665.0" layoutY="501.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="220.0" text="Voir factures" />
                </children>
             </AnchorPane>
          </content>

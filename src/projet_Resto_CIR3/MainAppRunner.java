@@ -2,7 +2,6 @@ package projet_Resto_CIR3;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -60,6 +59,7 @@ public class MainAppRunner extends Application {
 			Parent root = FXMLLoader.load(getClass().getResource("ecran.fxml"));
 			Scene scene = new Scene(root);
 			
+			stage.setResizable(false);
 			stage.setScene(scene);
 			stage.setTitle("RestoManager8000");
 			stage.show();
