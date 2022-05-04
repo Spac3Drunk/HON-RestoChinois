@@ -44,6 +44,17 @@ public class Inventaire{
 		}
 	}
 	
+	public boolean dispo(String name, int amounts) {
+		boolean res = false;
+		if(this.inv.containsKey(name)) {
+			int tmp = this.inv.get(name).getValue()-amounts;
+			if(tmp>=0) {res = true;}
+		}else {
+			System.out.println("Vous etes une merde, name n'existe pas");
+		}
+		return res;
+	}
+	
 	public void listeCourse(TxtManagement listeTxt) {
 		listeTxt.clearBuffer();
 		listeTxt.updateLine("Ingredients manquants : \n" , 0);
