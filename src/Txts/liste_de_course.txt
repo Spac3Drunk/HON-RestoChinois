@@ -1,0 +1,19 @@
+Ingredients manquants : 
+
+Limonade	 : 	5
+Champignon	 : 	7
+Tomate	 : 	8
+Oignon	 : 	3
+PateAPizza	 : 	5
+Creme	 : 	1
+PateAFajitas	 : 	1
+Salade	 : 	7
+BiereSansAlcool	 : 	3
+JusFruit	 : 	2
+Poulet	 : 	0
+CidreDoux	 : 	2
+Viande	 : 	5
+PainABurger	 : 	4
+VerreEau	 : 	4
+Chorizo	 : 	2
+Fromage	 : 	5

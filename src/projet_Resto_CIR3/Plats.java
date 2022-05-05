@@ -26,8 +26,9 @@ public class Plats {
 		if(!this.nomDuPlat.contains("Menu_100_ans")) {
 			System.out.println("Ingredients :");
 			for(int i = 0;i < this.ingredientsNecessaires.size();i++) {
-				System.out.println(this.ingredientsNecessaires.get(i));
+				System.out.print(this.ingredientsNecessaires.get(i) + "  ");
 			}
+			System.out.println();
 		}
 		
 	}

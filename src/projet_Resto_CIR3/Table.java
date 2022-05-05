@@ -20,19 +20,32 @@ public class Table {
 		
 	//Methods_________________________________________________________________________________________
 		
-		public void commandePlat(int id, Menu cartePlats, Inventaire inv) {
-			Plats platCommandé = cartePlats.listePlats.get(id);
+		public ArrayList<String> allPlatCommandeNamePrice() {
+			ArrayList<String> res = new ArrayList<String>();
+			for (int i=0; i<this.listePlatsCommandes.size(); i++) {
+				String tmp = listePlatsCommandes.get(i).nomDuPlat;
+				tmp = tmp.replace("_", " ");
+				res.add(tmp + "\t : " + listePlatsCommandes.get(i).prix + "€");
+			}
+			return res;
+		}
+		
+		public boolean commandePlat(int id, Menu cartePlats, Inventaire inv) {
+			boolean res = true;
+			Plats platCommande = new Plats(cartePlats.listePlats.get(id).nomDuPlat,
+											cartePlats.listePlats.get(id).prix,
+											cartePlats.listePlats.get(id).ingredientsNecessaires);
 			
-			int sizePlat = platCommandé.ingredientsNecessaires.size();
+			int sizePlat = platCommande.ingredientsNecessaires.size();
 			int ingQuantity = 1;
 			int dispoError = 0;
 			for(int i = 0;i<sizePlat;i++) {
 				ingQuantity = 1;
 				if(sizePlat > i+1) {
-					if(platCommandé.ingredientsNecessaires.get(i).contains(platCommandé.ingredientsNecessaires.get(i+1))) {
+					if(platCommande.ingredientsNecessaires.get(i).contains(platCommande.ingredientsNecessaires.get(i+1))) {
 						ingQuantity++;
 						if(sizePlat > i+2) {
-							if(platCommandé.ingredientsNecessaires.get(i).contains(platCommandé.ingredientsNecessaires.get(i+2))) {
+							if(platCommande.ingredientsNecessaires.get(i).contains(platCommande.ingredientsNecessaires.get(i+2))) {
 								ingQuantity++;
 								i = i + 2;
 							}else {
@@ -42,21 +55,21 @@ public class Table {
 					}
 				}
 				
-				if(inv.dispo(platCommandé.ingredientsNecessaires.get(i), ingQuantity)) {
+				if(inv.dispo(platCommande.ingredientsNecessaires.get(i), ingQuantity)) {
 					
 				}else {
 					dispoError = 1;
 				}
 			}
 			if(dispoError == 0) {
-				listePlatsCommandes.add(platCommandé);
+				listePlatsCommandes.add(platCommande);
 				for(int i = 0;i<sizePlat;i++) {
 					ingQuantity = 1;
 					if(sizePlat > i+1) {
-						if(platCommandé.ingredientsNecessaires.get(i).contains(platCommandé.ingredientsNecessaires.get(i+1))) {
+						if(platCommande.ingredientsNecessaires.get(i).contains(platCommande.ingredientsNecessaires.get(i+1))) {
 							ingQuantity++;
 							if(sizePlat > i+2) {
-								if(platCommandé.ingredientsNecessaires.get(i).contains(platCommandé.ingredientsNecessaires.get(i+2))) {
+								if(platCommande.ingredientsNecessaires.get(i).contains(platCommande.ingredientsNecessaires.get(i+2))) {
 									ingQuantity++;
 									i = i + 2;
 								}else {
@@ -65,30 +78,32 @@ public class Table {
 							}
 						}
 					}
-					inv.subInvItem(platCommandé.ingredientsNecessaires.get(i),ingQuantity);
+					inv.subInvItem(platCommande.ingredientsNecessaires.get(i),ingQuantity);
 					
 				}
 			}else {
-				System.out.println("Plus assez d'ingredients!");
+				res = false;
 			}
-			
+			return res;
 		}
 		
-		
-		public void commandePlatMenu100ans(int id, Menu cartePlats, Inventaire inv) {
-			Plats platCommandé = cartePlats.listePlats.get(id);
-			if(!platCommandé.nomDuPlat.contains("Menu_100_ans")) {
-				platCommandé.prix = 0;
-				int sizePlat = platCommandé.ingredientsNecessaires.size();
+		public boolean commandePlatMenu100ans(int id, Menu cartePlats, Inventaire inv) {
+			boolean res = true;
+			Plats platCommande = new Plats(cartePlats.listePlats.get(id).nomDuPlat,
+											cartePlats.listePlats.get(id).prix,
+											cartePlats.listePlats.get(id).ingredientsNecessaires);
+			if(!platCommande.nomDuPlat.contains("Menu_100_ans")) {
+				platCommande.prix = 0;
+				int sizePlat = platCommande.ingredientsNecessaires.size();
 				int ingQuantity = 1;
 				int dispoError = 0;
 				for(int i = 0;i<sizePlat;i++) {
 					ingQuantity = 1;
 					if(sizePlat > i+1) {
-						if(platCommandé.ingredientsNecessaires.get(i).contains(platCommandé.ingredientsNecessaires.get(i+1))) {
+						if(platCommande.ingredientsNecessaires.get(i).contains(platCommande.ingredientsNecessaires.get(i+1))) {
 							ingQuantity++;
 							if(sizePlat > i+2) {
-								if(platCommandé.ingredientsNecessaires.get(i).contains(platCommandé.ingredientsNecessaires.get(i+2))) {
+								if(platCommande.ingredientsNecessaires.get(i).contains(platCommande.ingredientsNecessaires.get(i+2))) {
 									ingQuantity++;
 									i = i + 2;
 								}else {
@@ -98,21 +113,21 @@ public class Table {
 						}
 					}
 					
-					if(inv.dispo(platCommandé.ingredientsNecessaires.get(i), ingQuantity)) {
+					if(inv.dispo(platCommande.ingredientsNecessaires.get(i), ingQuantity)) {
 						
 					}else {
 						dispoError = 1;
 					}
 				}
 				if(dispoError == 0) {
-					listePlatsCommandes.add(platCommandé);
+					listePlatsCommandes.add(platCommande);
 					for(int i = 0;i<sizePlat;i++) {
 						ingQuantity = 1;
 						if(sizePlat > i+1) {
-							if(platCommandé.ingredientsNecessaires.get(i).contains(platCommandé.ingredientsNecessaires.get(i+1))) {
+							if(platCommande.ingredientsNecessaires.get(i).contains(platCommande.ingredientsNecessaires.get(i+1))) {
 								ingQuantity++;
 								if(sizePlat > i+2) {
-									if(platCommandé.ingredientsNecessaires.get(i).contains(platCommandé.ingredientsNecessaires.get(i+2))) {
+									if(platCommande.ingredientsNecessaires.get(i).contains(platCommande.ingredientsNecessaires.get(i+2))) {
 										ingQuantity++;
 										i = i + 2;
 									}else {
@@ -121,17 +136,16 @@ public class Table {
 								}
 							}
 						}
-						inv.subInvItem(platCommandé.ingredientsNecessaires.get(i),ingQuantity);
+						inv.subInvItem(platCommande.ingredientsNecessaires.get(i),ingQuantity);
 						
 					}
 				}else {
-					System.out.println("Plus assez d'ingredients!");
+					res = false;
 				}
 			}else {
-				System.out.println("Vous ne pouvez pas commander un menu 100 ans dans un menu 100 ans!");
+				//System.out.println("Vous ne pouvez pas commander un menu 100 ans dans un menu 100 ans!");
 			}
-			
-			
+			return res;
 		}
 		
 		public void makeFacture() {
@@ -165,7 +179,7 @@ public class Table {
 			String stringToSplit = this.nomTable;
 			String nombre = stringToSplit.substring(stringToSplit.indexOf('_') + 1,stringToSplit.length());
 
-			tmp = "Table n° : \t\t" + nombre;
+			tmp = "Table n€ : \t\t" + nombre;
 			listeTxt.updateLine(tmp, sizeComm+2);
 			listeTxt.ecrireTexte();
 		}
